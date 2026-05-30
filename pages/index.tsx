@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import PdfCompressor from "@/components/PdfCompressor";
 
 const features = [
@@ -138,11 +139,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* فوتر */}
-      <footer className="border-t border-stone-200 py-8 text-center text-sm text-stone-500">
-        ساخته‌شده با Next.js — تمام پردازش‌ها روی دستگاه شما انجام می‌شود.
-      </footer>
+      <Footer />
     </main>
   );
 }
