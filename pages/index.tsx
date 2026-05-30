@@ -2,6 +2,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import PdfCompressor from "@/components/PdfCompressor";
 import logo from "@/public/images/logo.png";
+import pdfVada from "@/public/images/pdfvada.png";
 
 // ✅ اصلاح: alt به صورت جدا شده با کاما (طبق خواسته)
 const LOGO_ALT =
@@ -129,6 +130,11 @@ export default function Home() {
         <section id="tool" className="mx-auto max-w-2xl scroll-mt-8 px-6 pb-20">
           <PdfCompressor />
         </section>
+        <section className="w-full flex   items-center justify-center m-2 mb-4 ">
+          <div className="bg-white rounded-2xl p-5">
+            <Image src={pdfVada} width={700} height={100} alt={LOGO_ALT} />
+          </div>
+        </section>
 
         {/* ✅ H2: مزایای فشرده سازی پی دی اف */}
         <section className="border-t border-stone-200 bg-white/40 py-20">
@@ -175,9 +181,9 @@ export default function Home() {
         */}
         <section className="py-20">
           <div className="mx-auto max-w-3xl px-6">
-            <div className="space-y-10">
+            <div className="space-y-10 bg-white p-5 rounded-2xl">
               {seoSections.map((s) => (
-                <article key={s.h2}>
+                <article key={s.h2} className="text-center shadow">
                   <h2 className="text-2xl font-black text-stone-900">{s.h2}</h2>
                   <p className="mt-3 leading-loose text-stone-600">{s.p}</p>
                 </article>
