@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import logo from "@/public/images/logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,8 +12,13 @@ export default function Footer() {
           {/* بخش برند + کلمات کلیدی */}
           <div className="max-w-md flex-1">
             <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#c63d22] font-black text-white">
-                PDF
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg  font-black text-white">
+                <Image
+                  src={logo}
+                  width={200}
+                  height={200}
+                  alt="PDF Compressor"
+                />
               </div>
               <h2 className="text-xl font-extrabold tracking-tight text-stone-800">
                 فشرده‌ساز PDF
@@ -21,6 +27,12 @@ export default function Footer() {
             <p className="mb-4 leading-relaxed text-stone-600">
               کاهش حجم فایل‌های PDF به‌صورت آنلاین و رایگان، بدون آپلود روی سرور
               و کاملاً امن — همهٔ پردازش روی دستگاه شما انجام می‌شود.
+            </p>
+            <p className="mx-auto mt-1 max-w-2xl text-lg leading-loose text-stone-600">
+              با ابزار کاهش حجم PDF می‌توانید فایل‌های PDF خود را به صورت آنلاین
+              فشرده کنید و حجم آن‌ها را بدون افت کیفیت کاهش دهید. این سرویس برای
+              ارسال فایل در واتساپ، ایمیل، سایت‌ها و ذخیره‌سازی سریع‌تر بسیار
+              کاربردی است.
             </p>
             <div className="space-y-1 text-sm text-stone-500">
               <h2>کاهش حجم PDF آنلاین</h2>
